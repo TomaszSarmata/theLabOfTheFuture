@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <!-- utf-8 works for most cases -->
+    <meta
+      name="viewport"
+      content="width=device-width" />
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <title>Discover The Lab of the Future</title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. -->
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+      <style>
+        * {
+          font-family: sans-serif !important;
+        }
+      </style>
+    <![endif]-->
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+    <!-- Web Font / @font-face : END -->
+    <!-- CSS Reset -->
+    <style type="text/css">
+      /* What it does: Remove spaces around the email design added by some email clients. */
+      /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+      html,
+      body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+      }
+
+      /* What it does: Stops email clients resizing small text. */
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      /* What it does: Centers email on Android 4.4 */
+      div[style*='margin: 16px 0'] {
+        margin: 0 !important;
+      }
+
+      /* What it does: Stops Outlook from adding extra spacing to tables. */
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+
+      /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed !important;
+        margin: 0 auto !important;
+      }
+      table table table {
+        table-layout: auto;
+      }
+
+      /* What it does: Uses a better rendering method when resizing images in IE. */
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* What it does: A work-around for iOS meddling in triggered links. */
+      .mobile-link--footer a,
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: underline !important;
+      }
+    </style>
+    <!-- Progressive Enhancements -->
+    <style type="text/css">
+      /* What it does: Hover styles for buttons */
+      .button-td,
+      .button-a {
+        transition: all 100ms ease-in;
+      }
+      .button-td:hover,
+      .button-a:hover {
+        background: #555555 !important;
+        border-color: #555555 !important;
+      }
+
+      /* colours */
+
+      .bg_white {
+        background: #ffffff;
+      }
+      .bg_light {
+        background: #fafafa;
+      }
+
+      /* Hero section */
+
+      .hero {
+        background-image: url('./images/image-3.jpg');
+        background-size: cover;
+        height: 400px;
+        position: relative;
+      }
+      .hero .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+      .hero .text {
+        color: #ffffff;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding: 50px;
+        text-align: center;
+      }
+      .hero .text h2 {
+        margin-top: 180px;
+        font-size: 30px;
+        margin-bottom: 0;
+      }
+
+      /* buttons */
+
+      .btn {
+        padding: 10px 20px;
+        background: #fb923c;
+        color: #ffffff;
+        border-radius: 5px;
+        display: inline-block;
+        text-align: center;
+      }
+      .btn:hover {
+        background: #f97316;
+      }
+
+      .outline-btn {
+        display: block;
+        padding: 6px 12px;
+        color: #000000;
+        text-decoration: none;
+        border: 2px solid #fb923c;
+        border-radius: 5px;
+        width: 50%;
+        margin: auto;
+        transition: all 0.3s;
+        margin-top: 30px;
+      }
+
+      .outline-btn-white {
+        display: block;
+        padding: 6px 12px;
+        color: #fff;
+        text-decoration: none;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        width: 20%;
+        margin: auto;
+        transition: all 0.3s;
+        margin-top: 30px;
+      }
+
+      .outline-btn:hover {
+        color: white;
+        background-color: #f97316;
+      }
+      .outline-btn-white:hover {
+        color: black;
+        background-color: #fff;
+      }
+
+      /* heading section */
+
+      .heading-section {
+        text-align: center;
+        padding: 2.5em;
+      }
+      .heading-section h2 {
+        color: #000000;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .heading-section .subheading {
+        margin-bottom: 20px;
+        display: inline-block;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.4);
+      }
+      .heading-section .subheading::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background: #0d0cb5;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+      .text-services {
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* cta bottom */
+
+      .cta-bottom {
+        background-color: #fb923c;
+      }
+
+      /* Media Queries */
+
+      @media screen and (max-width: 610px) {
+        /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+        .fluid,
+        .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        /* And center justify these ones. */
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+
+        /* What it does: Forces table cells into full-width rows. */
+        .stack-column,
+        .stack-column-center {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
+        }
+        /* And center justify these ones. */
+        .stack-column-center {
+          text-align: center !important;
+        }
+
+        /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+        .center-on-narrow {
+          text-align: center !important;
+          display: block !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          float: none !important;
+        }
+        table.center-on-narrow {
+          display: inline-block !important;
+        }
+
+        .hide-on-narrow {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body
+    bgcolor="#f1f1f1"
+    style="margin: 0"
+    width="100%">
+    <center style="width: 100%; background: #f1f1f1">
+      <!-- Visually Hidden Preheader Text : BEGIN -->
+      <div
+        style="
+          display: none;
+          font-size: 1px;
+          line-height: 1px;
+          max-height: 0px;
+          max-width: 0px;
+          opacity: 0;
+          overflow: hidden;
+          mso-hide: all;
+          font-family: sans-serif;
+        ">
+        %preheader_text%
+      </div>
+      <!-- Visually Hidden Preheader Text : END --><!--    
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+            Note: The Fluid and Responsive templates have a different width (600px). The hybrid grid is more "fragile", and I've found that 600px is a good width. Change with caution.  
+        -->
+
+      <div style="max-width: 600px; margin: auto">
+        <!--[if mso]>
+            <table cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+        <!-- Email Header : BEGIN -->
+        <table
+          align="center"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          style="max-width: 600px"
+          width="100%">
+          <tbody>
+            <tr>
+              <td style="padding: 20px 20px; text-align: center">
+                <a href="http://www.azonetwork.com"
+                  ><img
+                    alt="AZoNetwork"
+                    border="0"
+                    src="https://d2jx2rerrg6sh3.cloudfront.net/themes/Standard/images/nm-logo-4-@2x.png"
+                    width="133"
+                /></a>
+              </td>
+              <td
+                class="hide-on-narrow"
+                style="padding: 20px 0; text-align: center">
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="
+                    width: 180px;
+                    margin: 0 auto;
+                    font-family: helvetica, arial, sans-serif;
+                    font-size: 14px;
+                    color: #484848;
+                    border-collapse: collapse;
+                    mso-table-lspace: 0pt;
+                    mso-table-rspace: 0pt;
+                  ">
+                  <tbody>
+                    <tr>
+                      <td
+                        colspan="3"
+                        style="text-align: center">
+                        <a
+                          href="%view_email_online_url%"
+                          style="color: #c8201e; font-size: 12px"
+                          target="_blank"
+                          >View as a Web Page</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="http://www.facebook.com/azonetwork"
+                          ><img
+                            alt="Facebook"
+                            src="http://www.azonetwork.com/emails/tc/freelance/facebook.jpg" />
+                        </a>
+                      </td>
+                      <td>
+                        <a href="http://www.twitter.com/azonetwork"
+                          ><img
+                            alt="Twitter"
+                            src="http://www.azonetwork.com/emails/tc/freelance/twitter.jpg" />
+                        </a>
+                      </td>
+                      <td>
+                        <a href="http://www.azo.tv"
+                          ><img
+                            alt="YouTube"
+                            src="http://www.azonetwork.com/emails/tc/freelance/youtube.jpg" />
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Email Header : END -->
+
+        <!-- Email Body : BEGIN -->
+
+        <table
+          align="center"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          style="max-width: 600px"
+          width="100%">
+          <!-- Hero Image, Flush : BEGIN -->
+          <tbody>
+            <tr>
+              <td>
+                <div class="hero">
+                  <div class="overlay"></div>
+                  <div class="text">
+                    <h2>Discover The Lab of the Future</h2>
+                    <p>
+                      Step into the future of scientific research with our
+                      latest eBook.
+                    </p>
+                    <a
+                      style="text-decoration: none"
+                      href="https://www.news-medical.net/industry-focus/The-Lab-of-the-Future-eBook"
+                      class="btn"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <!-- here -->
+
+            <tr>
+              <td class="heading-section bg_white">
+                <h2>Ready to step into the future of scientific research?</h2>
+                <p style="margin: 40px">
+                  We’re thrilled to announce the release of our latest resource,
+                  "The Lab of the Future", a comprehensive eBook designed to
+                  give you a glimpse into the future of laboratories.
+                </p>
+
+                <table>
+                  <tr>
+                    <td style="padding: 10px; width: 50%">
+                      <h2 style="margin-bottom: 10px; font-size: 26px">
+                        What's Inside?
+                      </h2>
+
+                      <a
+                        style="margin-bottom: 40px"
+                        class="outline-btn"
+                        href="https://www.news-medical.net/industry-focus/The-Lab-of-the-Future-eBook"
+                        >Learn More</a
+                      >
+                    </td>
+                    <td>
+                      <img
+                        width="100%"
+                        height="100%"
+                        src="./images/image-1.png"
+                        alt="" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="bg_light"
+                style="padding-bottom: 50px">
+                <table
+                  role="presentation"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  width="100%">
+                  <tr>
+                    <td class="text-services">
+                      <h3>Innovative Technologies</h3>
+                      <p>
+                        Discover the advanced tools that will revolutionize
+                        research.
+                      </p>
+                    </td>
+                    <td class="text-services">
+                      <h3>Sustainability Initiatives</h3>
+                      <p>
+                        Learn how labs are becoming safer and more efficient.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-services">
+                      <h3>Automation and AI</h3>
+                      <p>
+                        Explore how AI is transforming data analysis for better
+                        results.
+                      </p>
+                    </td>
+                    <td class="text-services">
+                      <h3>Case Studies</h3>
+                      <p>
+                        Gain insights from real-world examples of these
+                        technologies.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- here -->
+
+            <tr>
+              <td class="heading-section cta-bottom">
+                <h2>Ready to Dive In?</h2>
+                <p>Download your free copy of "The Lab of the Future" today!</p>
+                <a
+                  href="https://www.news-medical.net/industry-focus/The-Lab-of-the-Future-eBook"
+                  class="btn outline-btn-white"
+                  >Get Your eBook</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#ffffff">
+                <a href="https://www.azonetwork.com"
+                  ><img
+                    align="center"
+                    alt=""
+                    border="0"
+                    src="banner.jpg"
+                    style="width: 100%; max-width: 600px"
+                    width="600"
+                /></a>
+              </td>
+            </tr>
+            <!-- Hero Image, Flush : END -->
+
+            <!-- Text Section : BEGIN -->
+            <!-- <tr>
+              <td bgcolor="#ffffff">
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="100%">
+                  <tbody>
+                    <tr>
+                      <td
+                        style="
+                          padding: 40px 40px 70px;
+                          text-align: left;
+                          font-family: sans-serif;
+                          font-size: 14px;
+                          mso-height-rule: exactly;
+                          line-height: 22px;
+                          color: #555555;
+                        ">
+                        <!-- Lorem ipsum&trade; dolor sit amet, consectetur
+                        adipiscing elit. Pellentesque suscipit, urna in
+                        consectetur vulputate, ante urna vehicula arcu, quis
+                        ullamcorper massa sem nec eros. Sed sit amet velit eu
+                        urna varius sagittis. Proin tellus quam, commodo at mi
+                        sed, venenatis facilisis erat.<br />
+                        <br />
+                        Vivamus volutpat, velit facilisis molestie suscipit, dui
+                        turpis finibus ante, ut mattis lacus nisl id est. Orci
+                        varius natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus. Class aptent taciti
+                        sociosqu ad litora torquent per conubia nostra, per
+                        inceptos himenaeos.<br />
+                        <br />
+                        Nullam pretium mauris tortor, vel vestibulum ipsum
+                        aliquet nec. Cras vitae bibendum elit. Nullam hendrerit
+                        quis nisl vel ullamcorper. Sed laoreet rutrum diam, sed
+                        pharetra metus tempor eu. Etiam orci enim, viverra et
+                        ullamcorper a, luctus eget nibh. Mauris finibus
+                        malesuada arcu, vel malesuada eros rutrum consectetur.
+                        Etiam vulputate erat sit amet augue faucibus, id luctus
+                        turpis rhoncus. <br />
+                        <br /> -->
+            <!-- Button : Begin -->
+            <!-- <table
+                          align="left"
+                          width="100%"
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          style="text-align: left">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <table
+                                  align="center"
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                      <td
+                                        align="center"
+                                        bgcolor="#E6AF2E"
+                                        style="
+                                          -webkit-border-radius: 3px;
+                                          -moz-border-radius: 3px;
+                                          border-radius: 3px;
+                                        ">
+                                        <a
+                                          href="https://www.azonetwork.com"
+                                          style="
+                                            letter-spacing: 1px;
+                                            font-size: 19px;
+                                            font-family: Helvetica, Arial,
+                                              sans-serif;
+                                            color: #ffffff;
+                                            text-decoration: none;
+                                            text-decoration: none;
+                                            -webkit-border-radius: 0px;
+                                            -moz-border-radius: 0px;
+                                            border-radius: 0px;
+                                            padding: 12px 120px;
+                                            border: 1px solid #e6af2e;
+                                            display: inline-block;
+                                          "
+                                          target="_blank">
+                                          Register Now
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table> -->
+            <!-- Button : END -->
+            <!-- </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td> -->
+            <!-- </tr>  -->
+            <!-- Text Section : END -->
+          </tbody>
+        </table>
+        <!-- Email Body : END -->
+
+        <!-- Email Footer : BEGIN -->
+
+        <table
+          align="center"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          style="max-width: 600px"
+          width="100%">
+          <tbody>
+            <tr>
+              <td
+                style="
+                  padding: 40px 10px;
+                  width: 100%;
+                  font-size: 12px;
+                  font-family: sans-serif;
+                  mso-height-rule: exactly;
+                  line-height: 18px;
+                  text-align: center;
+                  color: #888888;
+                ">
+                AZoNetwork UK Ltd.<br />
+                <span class="mobile-link--footer"
+                  >NEO, 9 Charlotte St, Manchester, M1 4ET, UK</span
+                ><br />
+                <span class="mobile-link--footer">+44 (0)161 457 7150</span
+                ><br />
+                <br />
+                <span style="font-weight: bold"
+                  >Why did you receive this email?</span
+                ><br />
+                You recently requested related information from us and asked to
+                be notified of additional information.<br />
+                <br />
+                <span style="font-weight: bold">Not Interested Anymore?</span
+                ><br />
+                <a
+                  href="%notification_preferences_url%"
+                  style="color: #006ab3; text-decoration: underline"
+                  >Update your Notification Preferences</a
+                ><br />
+                <br />
+                Copyright &copy; 2000-2024
+                <img
+                  alt=""
+                  border="0"
+                  src="%tracking_image_url%"
+                  style="border: none" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Email Footer : END -->
+        <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+      </div>
+    </center>
+  </body>
+</html>
