@@ -159,6 +159,7 @@
         margin: auto;
         transition: all 0.3s;
         margin-top: 30px;
+        margin-bottom: 40px;
       }
 
       .outline-btn-white {
@@ -194,6 +195,9 @@
         font-size: 24px;
         margin-bottom: 10px;
       }
+      .heading-section p {
+        margin: 40px;
+      }
       .heading-section .subheading {
         margin-bottom: 20px;
         display: inline-block;
@@ -214,6 +218,13 @@
         text-align: center;
       }
 
+      /* cta middle */
+
+      .cta-middle-text {
+        padding: 10px;
+        width: 50%;
+      }
+
       /* cta bottom */
 
       .cta-bottom {
@@ -224,12 +235,46 @@
 
       @media screen and (max-width: 510px) {
         .hero .text {
-          /* color: #ffffff;
-        position: relative;
-        z-index: 2;
-        height: 100%;
-        text-align: center; */
           padding: 20px;
+        }
+        .heading-section p {
+          margin: 40px 0;
+        }
+
+        .cta-middle-container {
+          height: 470px;
+          display: block;
+          position: relative;
+        }
+        .cta-middle-text {
+          order: 2;
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
+          position: absolute;
+          bottom: 0;
+        }
+        .cta-middle-img {
+          order: 1;
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
+          position: absolute;
+          top: 0;
+        }
+
+        .outline-btn {
+          margin-bottom: 0;
+          max-width: 35%;
+        }
+
+        .cta-middle-img-wrapper {
+          border-top: 2.5px solid #fb923c;
+          border-left: 2.5px solid #fb923c;
+          border-radius: 8px;
+          padding: 8px;
         }
       }
 
@@ -433,28 +478,27 @@
             <tr>
               <td class="heading-section bg_white">
                 <h2>Ready to step into the future of scientific research?</h2>
-                <p style="margin: 40px">
+                <p>
                   We’re thrilled to announce the release of our latest resource,
                   "The Lab of the Future", a comprehensive eBook designed to
                   give you a glimpse into the future of laboratories.
                 </p>
 
-                <table>
+                <table class="cta-middle-container">
                   <tr>
-                    <td style="padding: 10px; width: 50%">
+                    <td class="cta-middle-text">
                       <h2 style="margin-bottom: 10px; font-size: 26px">
                         What's Inside?
                       </h2>
 
                       <a
-                        style="margin-bottom: 40px"
                         class="outline-btn"
                         href="https://www.news-medical.net/industry-focus/The-Lab-of-the-Future-eBook"
                         >Learn More</a
                       >
                     </td>
-                    <td>
-                      <div>
+                    <td class="cta-middle-img">
+                      <div class="cta-middle-img-wrapper">
                         <img
                           width="100%"
                           height="100%"
